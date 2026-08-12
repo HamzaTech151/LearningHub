@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LearningHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION BAR
+     ========================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        LearningHub
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <!-- SERVICES DROPDOWN -->
+
+        <li class="dropdown">
+
+            <a href="#services">
+                Services ▼
+            </a>
+
+            <ul class="dropdown-menu">
+
+                <li>
+                    <a href="#services">
+                        Web Development
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services">
+                        SEO
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services">
+                        Digital Marketing
+                    </a>
+                </li>
+
+            </ul>
+
+        </li>
+
+        <li>
+            <a href="#contact">
+                Contact Us
+            </a>
+        </li>
+
+    </ul>
+
+
+    <!-- SEARCH -->
+
+    <div class="search">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search..."
+        >
+
+        <button onclick="searchWebsite()">
+            Search
+        </button>
+
+    </div>
+
+
+    <!-- DARK MODE BUTTON -->
+
+    <button
+        class="dark-mode-btn"
+        onclick="toggleDarkMode()"
+        id="darkModeButton"
+        title="Toggle Dark Mode"
+    >
+        🌙
+    </button>
+
+</nav>
+
+
+<!-- =========================
+     IMAGE SLIDER
+     ========================= -->
+
+<section id="home" class="slider">
+
+    <div class="slides" id="slides">
+
+
+        <!-- SLIDE 1 -->
+
+        <div class="slide">
+
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
+                alt="Web Development"
+            >
+
+            <div class="slide-text">
+
+                <h1>
+                    Web Development
+                </h1>
+
+                <p>
+                    Learn how to create modern and responsive websites.
+                </p>
+
+                <button
+                    class="hero-button"
+                    onclick="showDetails('web')"
+                >
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 2 -->
+
+        <div class="slide">
+
+            <img
+                src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1600&q=80"
+                alt="SEO"
+            >
+
+            <div class="slide-text">
+
+                <h1>
+                    Search Engine Optimization
+                </h1>
+
+                <p>
+                    Improve website visibility and reach more people.
+                </p>
+
+                <button
+                    class="hero-button"
+                    onclick="showDetails('seo')"
+                >
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 3 -->
+
+        <div class="slide">
+
+            <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1115&auto=format&fit=crop"
+                alt="Digital Marketing"
+            >
+
+            <div class="slide-text">
+
+                <h1>
+                    Digital Marketing
+                </h1>
+
+                <p>
+                    Promote your business through digital platforms.
+                </p>
+
+                <button
+                    class="hero-button"
+                    onclick="showDetails('marketing')"
+                >
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SLIDER BUTTONS -->
+
+    <button
+        class="prev"
+        onclick="previousSlide()"
+    >
+        ❮
+    </button>
+
+    <button
+        class="next"
+        onclick="nextSlide()"
+    >
+        ❯
+    </button>
+
+
+    <!-- SLIDER DOTS -->
+
+    <div class="dots">
+
+        <span
+            class="dot active"
+            onclick="currentSlide(0)"
+        ></span>
+
+        <span
+            class="dot"
+            onclick="currentSlide(1)"
+        ></span>
+
+        <span
+            class="dot"
+            onclick="currentSlide(2)"
+        ></span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WELCOME SECTION
+     ========================= -->
+
+<section class="welcome">
+
+    <h2>
+        Welcome to LearningHub
+    </h2>
+
+    <p>
+        LearningHub is a simple digital learning platform where
+        you can explore web development, SEO and digital marketing.
+        Our goal is to help beginners learn useful digital skills.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     STATISTICS
+     OPTION 7
+     ========================= -->
+
+<section class="stats-section">
+
+    <div class="stats-container">
+
+        <div class="stat-box">
+
+            <div
+                class="counter"
+                data-target="500"
+            >
+                0
+            </div>
+
+            <h3>
+                Students
+            </h3>
+
+        </div>
+
+
+        <div class="stat-box">
+
+            <div
+                class="counter"
+                data-target="25"
+            >
+                0
+            </div>
+
+            <h3>
+                Courses
+            </h3>
+
+        </div>
+
+
+        <div class="stat-box">
+
+            <div
+                class="counter"
+                data-target="10"
+            >
+                0
+            </div>
+
+            <h3>
+                Expert Topics
+            </h3>
+
+        </div>
+
+
+        <div class="stat-box">
+
+            <div
+                class="counter"
+                data-target="95"
+            >
+                0
+            </div>
+
+            <h3>
+                Success Rate %
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES SECTION
+     ========================= -->
+
+<section
+    id="services"
+    class="services"
+>
+
+    <h2>
+        Our Services
+    </h2>
+
+    <p class="section-intro">
+        Explore our digital learning and professional services.
+    </p>
+
+
+    <div class="service-container">
+
+
+        <!-- WEB DEVELOPMENT -->
+
+        <div class="service-box">
+
+            <div class="service-icon">
+                💻
+            </div>
+
+            <h3>
+                Web Development
+            </h3>
+
+            <p>
+                Learn how to create modern and responsive websites
+                using HTML, CSS and JavaScript.
+            </p>
+
+            <button
+                onclick="showDetails('web')"
+            >
+                Learn More
+            </button>
+
+        </div>
+
+
+        <!-- SEO -->
+
+        <div class="service-box">
+
+            <div class="service-icon">
+                🔍
+            </div>
+
+            <h3>
+                SEO
+            </h3>
+
+            <p>
+                Learn how to optimize websites and improve
+                their visibility on search engines.
+            </p>
+
+            <button
+                onclick="showDetails('seo')"
+            >
+                Learn More
+            </button>
+
+        </div>
+
+
+        <!-- DIGITAL MARKETING -->
+
+        <div class="service-box">
+
+            <div class="service-icon">
+                📱
+            </div>
+
+            <h3>
+                Digital Marketing
+            </h3>
+
+            <p>
+                Learn social media, online advertising and
+                modern digital marketing techniques.
+            </p>
+
+            <button
+                onclick="showDetails('marketing')"
+            >
+                Learn More
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICE DETAILS
+     ========================= -->
+
+<section
+    id="service-details"
+    class="details-section"
+>
+
+    <h2 id="details-title">
+        Service Details
+    </h2>
+
+    <p
+        id="details-intro"
+        class="details-intro"
+    ></p>
+
+
+    <div class="details-container">
+
+
+        <div class="detail-box">
+
+            <h3 id="detail-heading-1"></h3>
+
+            <p id="detail-text-1"></p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h3 id="detail-heading-2"></h3>
+
+            <p id="detail-text-2"></p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h3 id="detail-heading-3"></h3>
+
+            <p id="detail-text-3"></p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h3 id="detail-heading-4"></h3>
+
+            <p id="detail-text-4"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHAT YOU WILL LEARN -->
+
+    <div class="course-info">
+
+        <h3>
+            What You Will Learn
+        </h3>
+
+        <ul id="learning-list"></ul>
+
+        <button onclick="hideDetails()">
+            Close Details
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POPULAR COURSES
+     ========================= -->
+
+<section class="courses">
+
+    <h2>
+        Popular Courses
+    </h2>
+
+    <p class="section-intro">
+        Start learning today with our beginner-friendly courses.
+    </p>
+
+
+    <div class="course-container">
+
+
+        <div class="course-box">
+
+            <h3>
+                HTML & CSS
+            </h3>
+
+            <p>
+                Learn the basics of creating and designing
+                websites from scratch.
+            </p>
+
+            <span>
+                Beginner
+            </span>
+
+        </div>
+
+
+        <div class="course-box">
+
+            <h3>
+                JavaScript
+            </h3>
+
+            <p>
+                Learn JavaScript fundamentals and make
+                websites interactive.
+            </p>
+
+            <span>
+                Beginner
+            </span>
+
+        </div>
+
+
+        <div class="course-box">
+
+            <h3>
+                SEO Fundamentals
+            </h3>
+
+            <p>
+                Learn the basic concepts of SEO and
+                website optimization.
+            </p>
+
+            <span>
+                Beginner
+            </span>
+
+        </div>
+
+
+        <div class="course-box">
+
+            <h3>
+                Digital Marketing
+            </h3>
+
+            <p>
+                Learn how to promote products and businesses
+                through digital platforms.
+            </p>
+
+            <span>
+                Beginner
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY CHOOSE US
+     OPTION 6
+     ========================= -->
+
+<section class="why-us">
+
+    <h2>
+        Why Choose LearningHub?
+    </h2>
+
+    <p class="section-intro">
+        Everything you need to build useful digital skills
+        in a simple and practical way.
+    </p>
+
+
+    <div class="why-container">
+
+
+        <div class="why-box">
+
+            <div class="why-icon">
+                🎓
+            </div>
+
+            <h3>
+                Beginner Friendly
+            </h3>
+
+            <p>
+                Easy explanations and simple learning material
+                designed especially for beginners.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <div class="why-icon">
+                💡
+            </div>
+
+            <h3>
+                Practical Learning
+            </h3>
+
+            <p>
+                Learn concepts through practical examples
+                and real-world website projects.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <div class="why-icon">
+                🚀
+            </div>
+
+            <h3>
+                Modern Skills
+            </h3>
+
+            <p>
+                Develop useful digital skills that can support
+                your education and future career.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <div class="why-icon">
+                🤝
+            </div>
+
+            <h3>
+                Easy Support
+            </h3>
+
+            <p>
+                Get simple guidance and support whenever
+                you need help understanding a topic.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT SECTION
+     ========================= -->
+
+<section
+    id="about"
+    class="about"
+>
+
+    <h2>
+        About LearningHub
+    </h2>
+
+    <p>
+        LearningHub is designed to help students and beginners
+        understand important digital skills in a simple way.
+    </p>
+
+    <p>
+        We focus on web development, SEO and digital marketing
+        so learners can develop practical knowledge.
+    </p>
+
+
+    <div class="about-points">
+
+
+        <div>
+
+            <h3>
+                Learn
+            </h3>
+
+            <p>
+                Understand digital concepts easily.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Practice
+            </h3>
+
+            <p>
+                Apply your knowledge through projects.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Grow
+            </h3>
+
+            <p>
+                Build skills for your future career.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CALL TO ACTION
+     ========================= -->
+
+<section class="cta">
+
+    <h2>
+        Start Learning Today
+    </h2>
+
+    <p>
+        Improve your digital skills with LearningHub.
+    </p>
+
+    <button
+        onclick="goToServices()"
+    >
+        Explore Services
+    </button>
+
+</section>
+
+
+<!-- =========================
+     CONTACT SECTION
+     ========================= -->
+
+<section
+    id="contact"
+    class="contact"
+>
+
+    <h2>
+        Contact Us
+    </h2>
+
+    <p>
+        Have a question? Send us a message.
+    </p>
+
+
+    <div class="contact-container">
+
+
+        <div class="contact-info">
+
+            <h3>
+                Get In Touch
+            </h3>
+
+            <p>
+                📧 Email: LearningHub@gmail.com
+            </p>
+
+            <p>
+                📞 Phone: +92 311 0882341
+            </p>
+
+            <p>
+                📍 Location: Islamabad, Pakistan
+            </p>
+
+        </div>
+
+
+        <form
+            id="contactForm"
+            onsubmit="submitForm(event)"
+        >
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <input
+                type="text"
+                id="subject"
+                placeholder="Subject"
+                required
+            >
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     IMPROVED FOOTER
+     OPTION 16
+     ========================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <!-- FOOTER ABOUT -->
+
+        <div class="footer-column">
+
+            <h3>
+                LearningHub
+            </h3>
+
+            <p>
+                Learn. Practice. Grow.
+            </p>
+
+            <p>
+                Build your digital skills with
+                simple and practical learning.
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <div class="footer-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-column">
+
+            <h3>
+                Our Services
+            </h3>
+
+            <div class="footer-links">
+
+                <a href="#services">
+                    Web Development
+                </a>
+
+                <a href="#services">
+                    SEO
+                </a>
+
+                <a href="#services">
+                    Digital Marketing
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SOCIAL LINKS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Follow Us
+            </h3>
+
+            <div class="social-links">
+
+                <a href="#" onclick="return false;">
+                    Facebook
+                </a>
+
+                <a href="#" onclick="return false;">
+                    Instagram
+                </a>
+
+                <a href="#" onclick="return false;">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 LearningHub. All Rights Reserved.
+        </p>
+
+        <p>
+            Learn. Practice. Grow.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     BACK TO TOP BUTTON
+     OPTION 13
+     ========================= -->
+
+<button
+    id="backToTop"
+    onclick="scrollToTop()"
+    title="Back to Top"
+>
+    ↑
+</button>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
