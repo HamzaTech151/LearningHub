@@ -79,7 +79,7 @@ This project was created as part of my web development portfolio to demonstrate 
 ---
 
 Author:
-      HamzaTech151
+HamzaTech151
 
 Connect With Me:
 * GitHub: [HamzaTech151](https://github.com/HamzaTech151)
